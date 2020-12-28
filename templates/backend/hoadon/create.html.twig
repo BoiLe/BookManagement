@@ -1,0 +1,41 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmLoaiSanPham" id="frmLoaiSanPham" method="post" action="/MyProject/backend/hoadon/create.php">
+    <div class="form-group">
+        <label for="lv_ma">Mã hóa đơn</label>
+        <input type="text" class="form-control" id="lsp_ma" name="hd_mhd"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="lv_ten">Tên khách hàng</label>
+        <input type="text" class="form-control" id="lv_ten" name="hd_tenkhachhang" >
+    </div>
+     <div class="form-group">
+        <label for="lv_ma">Ngày lập</label>
+        <input type="text" class="form-control" id="lsp_ma" name="hd_ngaylap"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="lv_ten">Tổng tiền</label>
+        <input type="text" class="form-control" id="lv_ten" name="hd_tongtien" >
+    </div>
+    
+    <button class="btn btn-primary" name="btnSave">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}

@@ -1,0 +1,66 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Danh sách Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Danh sách Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<!-- Nút thêm mới, bấm vào sẽ hiển thị form nhập thông tin Thêm mới -->
+<a href="create.php" class="btn btn-primary">
+    <span data-feather="plus"></span> Thêm mới
+</a>
+<table class="table table-bordered table-hover mt-2">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên sách</th>
+            <th>Hình ảnh sách</th>
+            <th>Mô tả</th>
+            <th>Mã tác giả</th>
+            <th>Mã loại sách</th>
+            <th>Mã lĩnh vực</th>
+            <th>Giá mua</th>
+            <th>Hành động</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        {% for sach in ds_sach %}
+        <tr>
+            <td>{{ sach.s_ms }}</td>
+            <td>{{ sach.s_ten }}</td>
+            <td>{{ sach.s_hinhanh }}</td>
+            <td>{{ sach.s_mota }}</td>
+            <td>{{ sach.s_mtacgia }}</td>
+            <td>{{ sach.s_mloasach }}</td>
+            <td>{{ sach.s_mlinhvuc }}</td>
+            <td>{{ sach.s_giamua }}</td>
+            
+         
+            <td>
+                <!-- Nút sửa, bấm vào sẽ hiển thị form hiệu chỉnh thông tin dựa vào khóa chính `lsp_ma` -->
+                <a href="edit.php?s_ms={{ sach.s_ms }}" class="btn btn-warning">
+                    <span data-feather="edit"></span> Sửa
+                </a>
+
+                <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `lsp_ma` -->
+                <a href="delete.php?s_ms={{ sach.s_ms }}" class="btn btn-danger">
+                    <span data-feather="delete"></span> Xóa
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+{# End Nội dung trong block content #}

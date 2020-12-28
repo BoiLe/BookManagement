@@ -1,0 +1,64 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Sửa Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Sửa Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmLoaiSanPham" id="frmLoaiSanPham" method="post" action="/MyProject/backend/sach/edit.php?s_ms={{ sach.MASACH }}">
+    <div class="form-group">
+        <label for="s_ms">Mã sách</label>
+        <input type="text" class="form-control" id="s_ms" name="s_ms"   value="{{ sach.MASACH }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_ten">Tên sách</label>
+        <input type="text" class="form-control" id="s_ten" name="s_ten"   value="{{ sach.TENSACH }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_hinhanh">Hình ảnh sách</label>
+        <input type="text" class="form-control" id="s_hinhanh" name="s_hinhanh"   value="{{ sach.HINHANHSACH }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_mota">Mô tả</label>
+        <input type="text" class="form-control" id="s_mota" name="s_mota"  value="{{ sach.MOTA }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_mtacgia">Mã tác giả</label>
+        <input type="text" class="form-control" id="s_mtacgia" name="s_mtacgia"   value="{{ sach.MATACGIA }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_loaisach">Mã loại sách</label>
+        <input type="text" class="form-control" id="s_mloaisach" name="s_mloaisach"   value="{{ sach.MALOAISACH }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_mlinhvuc">Mã lĩnh vực</label>
+        <input type="text" class="form-control" id="s_mlinhvuc" name="s_mlinhvuc"  value="{{ sach.MALINHVUC }}">
+        
+    </div>
+    <div class="form-group">
+        <label for="s_giamua">Giá mua</label>
+        <input type="text" class="form-control" id="s_giamua" name="s_giamua"   value="{{ sach.GIAMUA }}">
+        
+    </div>
+    
+    
+    <button class="btn btn-primary" name="btnSave">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}

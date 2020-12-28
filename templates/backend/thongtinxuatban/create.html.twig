@@ -1,0 +1,50 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmLoaiSanPham" id="frmLoaiSanPham" method="post" action="/MyProject/backend/thongtinxuatban/create.php">
+    <div class="form-group">
+        <label for="ttxb_ms">Mã sách</label>
+        <input type="text" class="form-control" id="ttxb_ms" name="ttxb_ms"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="ttxb_lantaiban">Lần tái bản</label>
+        <input type="text" class="form-control" id="ttxb_lantaiban" name="ttxb_lantaiban"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="ttxb_namxuatban">Năm xuất bản</label>
+        <input type="text" class="form-control" id="ttxb_namxuatban" name="ttxb_namxuatban"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="ttxb_nhaxuatban">Nhà xuất bản</label>
+        <input type="text" class="form-control" id="ttxb_nhaxuatban" name="ttxb_nhaxuatban"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="ttxb_giabia">Giá bìa</label>
+        <input type="text" class="form-control" id="ttxb_giabia" name="ttxb_giabia"  >
+        
+    </div>
+
+   
+    
+    <button class="btn btn-primary" name="btnSave">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}

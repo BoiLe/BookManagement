@@ -1,0 +1,40 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmLoaiSanPham" id="frmLoaiSanPham" method="post" action="/MyProject/backend/chitiethoadon/create.php">
+    <div class="form-group">
+        <label for="cthd_mahd">Mã hóa đơn</label>
+        <input type="text" class="form-control" id="cthd_mhd" name="cthd_mhd" >
+        
+    </div>
+    <div class="form-group">
+        <label for="cthd_mas">Mã sách</label>
+        <input type="text" class="form-control" id="cthd_ms" name="cthd_ms" >
+    </div>
+    <div class="form-group">
+        <label for="cthd_sl">Số lượng</label>
+        <input type="text" class="form-control" id="cthd_sl" name="cthd_sl" >
+    </div>
+    <div class="form-group">
+        <label for="cthd_mgg">Mức giảm giá</label>
+        <input type="text" class="form-control" id="cthd_mgg" name="cthd_mgg" >
+    </div>
+    
+    <button class="btn btn-primary" name="btnSave">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}

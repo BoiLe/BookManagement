@@ -1,0 +1,32 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmLoaiSanPham" id="frmLoaiSanPham" method="post" action="/MyProject/backend/sachkhuyenmai/create.php">
+    <div class="form-group">
+        <label for="skm_ms">Mã sách</label>
+        <input type="text" class="form-control" id="skm_ms" name="skm_ms"  >
+        
+    </div>
+    <div class="form-group">
+        <label for="s_mgg">Mức giảm giá</label>
+        <input type="text" class="form-control" id="s_mgg" name="s_mgg" >
+    </div>
+    
+    <button class="btn btn-primary" name="btnSave">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}
